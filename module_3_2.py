@@ -1,12 +1,12 @@
-# ДЗ "Способы вызова функции"
+# Домашнее задание "Способы вызова функции"
+# Исправленый
 
 def send_email(message, recipient, *, sender="university.help@gmail.com"):
-    if ("@" and (".com" or ".ru" or ".net")) not in (recipient and sender) and (
-            "@" and (".com" or ".ru" or ".net")) not in (recipient and sender):
-
+    if (("@" and (".com" or ".ru" or ".net")) not in (recipient and sender) and
+        ("@" and (".com" or ".ru" or ".net")) not in (recipient and sender)):
         print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
-        return
-    elif recipient == sender:
+
+    if recipient == sender:
         print(f"Нельзя отправить письмо самому себе!")
         return
     elif sender == "university.help@gmail.com":
@@ -19,4 +19,6 @@ send_email('Это сообщение для проверки связи', 'alex
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
 send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+
+
 
